@@ -23,12 +23,11 @@ public class UserRegisterEndpoint {
     @POST
     public Response post(User user) {
         try {
-            User fromDb = this.userRepository.findOne(user.getEmail());
-            if (fromDb == null) {
+            if (!userRepository.exists(user.getEmail())) {
                 User savedUser = this.userRepository.save(user);
                 return Response.status(Response.Status.CREATED).entity("User " + savedUser.getEmail() + " saved!").build();
             } else {
-                return Response.status(Response.Status.BAD_REQUEST).entity("User " + fromDb.getEmail() + " already exists!").build();
+                return Response.status(Response.Status.BAD_REQUEST).entity("User " + user.getEmail() + " already exists!").build();
             }
         } catch (TransactionSystemException | InvalidDataAccessApiUsageException ex) {
             return Response.status(Response.Status.BAD_REQUEST).entity("Missing parameters!").build();
