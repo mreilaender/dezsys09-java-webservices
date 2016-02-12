@@ -22,9 +22,9 @@ public class UserLoginEndpoint {
     public Response post(User user) {
         User userFromDb = userRepository.findOne(user.getEmail());
         if (userFromDb != null && userFromDb.getPassword().equals(user.getPassword())) {
-            return Response.status(Response.Status.OK).entity("Welcome " + userFromDb.getName() + "!").build();
+            return Response.status(Response.Status.OK).entity("Welcome " + userFromDb.getName() + "!").type(MediaType.TEXT_PLAIN).build();
         } else {
-            return Response.status(Response.Status.FORBIDDEN).entity("Invalid account data!").build();
+            return Response.status(Response.Status.FORBIDDEN).entity("Invalid account data!").type(MediaType.TEXT_PLAIN).build();
         }
     }
 }

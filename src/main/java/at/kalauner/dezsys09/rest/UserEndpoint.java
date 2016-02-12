@@ -24,7 +24,7 @@ public class UserEndpoint {
         User user = this.userRepository.findOne(id);
 
         if(user == null) {
-            return Response.status(Response.Status.NOT_FOUND).entity("User not found for id: " + id).build();
+            return Response.status(Response.Status.NOT_FOUND).entity("User not found for id: " + id).type(MediaType.TEXT_PLAIN).build();
         }
         return Response.ok(user, MediaType.APPLICATION_JSON).build();
     }
