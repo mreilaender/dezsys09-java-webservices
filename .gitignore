@@ -10,3 +10,4 @@ Thumbs.db
 .DS_STORE
 gradle-app.setting
 !gradle-wrapper.jar
+*.db
