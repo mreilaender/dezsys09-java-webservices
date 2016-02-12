@@ -12,6 +12,12 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 
+/**
+ * Mapping for path {@code /register}
+ *
+ * @author Paul Kalauner 5BHIT
+ * @version 20160212.1
+ */
 @Named
 @Path("/register")
 @Produces({MediaType.APPLICATION_JSON})
@@ -20,6 +26,12 @@ public class UserRegisterEndpoint {
     @Inject
     private UserRepository userRepository;
 
+    /**
+     * Registers a new user
+     *
+     * @param user the user which should be registered
+     * @return response
+     */
     @POST
     public Response post(User user) {
         try {

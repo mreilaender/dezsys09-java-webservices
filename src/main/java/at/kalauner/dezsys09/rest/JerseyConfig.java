@@ -6,7 +6,10 @@ import org.glassfish.jersey.server.ResourceConfig;
 import javax.inject.Named;
 
 /**
- * Created by Paul on 12.02.2016.
+ * JerseyConfig
+ *
+ * @author Paul Kalauner 5BHIT
+ * @version 20160212.1
  */
 @Named
 public class JerseyConfig extends ResourceConfig {

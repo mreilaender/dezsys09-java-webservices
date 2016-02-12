@@ -7,6 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.Size;
 
+/**
+ * Represents a user saved in the DB
+ *
+ * @author Paul Kalauner 5BHIT
+ * @version 20160212.1
+ */
 @Entity
 public class User {
     @Id
@@ -20,7 +26,8 @@ public class User {
     @NotEmpty
     private String password;
 
-    public User() {}
+    public User() {
+    }
 
     public User(String email) {
         this.email = email;
