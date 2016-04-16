@@ -1,3 +1,6 @@
+# Copyright
+Full copyright by Paul Kalauner (https://github.com/pkalauner-tgm/dezsys09-java-webservices)
+
 # Einführung
 
 Diese Übung zeigt die Anwendung von mobilen Diensten in Java.
