@@ -98,7 +98,7 @@ public class RegisterTest {
     }
 
     @Test
-    public void testUserWithoutEmail() {
+    public void testUserWithNullEmail() {
         User user = new User(null, "user1", "secret");
         try {
             this.restTemplate.postForEntity(url + "/register", user, String.class);
