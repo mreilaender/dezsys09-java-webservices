@@ -1,6 +1,9 @@
 # Copyright
 Full copyright by Paul Kalauner (https://github.com/pkalauner-tgm/dezsys09-java-webservices)
 
+# Änderungen
+Hier wurden lediglich Unit Tests hinzugefügt.
+
 # Einführung
 
 Diese Übung zeigt die Anwendung von mobilen Diensten in Java.
