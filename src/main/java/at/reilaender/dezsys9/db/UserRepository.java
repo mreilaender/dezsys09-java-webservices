@@ -1,8 +1,6 @@
-package at.kalauner.dezsys09.db;
+package at.reilaender.dezsys9.db;
 
 import org.springframework.data.repository.CrudRepository;
-
-import java.util.List;
 
 
 /**

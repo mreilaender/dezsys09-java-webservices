@@ -1,4 +1,4 @@
-package at.kalauner.dezsys09.rest;
+package at.reilaender.dezsys9.rest;
 
 import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;

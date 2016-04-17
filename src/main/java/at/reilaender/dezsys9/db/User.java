@@ -1,4 +1,4 @@
-package at.kalauner.dezsys09.db;
+package at.reilaender.dezsys9.db;
 
 
 import org.hibernate.validator.constraints.NotEmpty;

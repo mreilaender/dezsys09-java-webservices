@@ -1,7 +1,7 @@
-package at.kalauner.dezsys09.rest;
+package at.reilaender.dezsys9.rest;
 
-import at.kalauner.dezsys09.db.User;
-import at.kalauner.dezsys09.db.UserRepository;
+import at.reilaender.dezsys9.db.User;
+import at.reilaender.dezsys9.db.UserRepository;
 
 import javax.inject.Inject;
 import javax.inject.Named;

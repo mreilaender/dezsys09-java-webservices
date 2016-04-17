@@ -1,9 +1,9 @@
-package at.kalauner.dezsys09;
+package at.reilaender.dezsys9;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import at.kalauner.dezsys09.db.User;
+import at.reilaender.dezsys9.db.User;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
