@@ -60,6 +60,7 @@ public class RegisterTest {
     public void testWithApacheClient() {
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
+            // Parameter wie Protokoll, host, port setzen
             URI uri = new URIBuilder()
                     .setScheme(protocol)
                     .setHost(host)
@@ -67,12 +68,15 @@ public class RegisterTest {
                     .setPath("/register")
                     .build();
             HttpPost post = new HttpPost(uri);
+            // Content type auf json setzen
             post.setHeader(HttpHeaders.CONTENT_TYPE, "application/json");
+            // POST Parameter setzen
             List<NameValuePair> nvps = new ArrayList<>();
             nvps.add(new BasicNameValuePair("name", "test"));
             nvps.add(new BasicNameValuePair("email", "test"));
             nvps.add(new BasicNameValuePair("password", "test"));
             post.setEntity(new UrlEncodedFormEntity(nvps));
+            // POST Request senden
             CloseableHttpResponse response = httpclient.execute(post);
             response.close();
         } catch (URISyntaxException e) {
