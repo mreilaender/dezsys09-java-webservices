@@ -90,6 +90,17 @@ public class RegisterTest {
     }
 
     @Test
+    public void testUserRegisterSuccessfull() {
+        User user = new User("user1@test.at", "user1", "secret");
+        try {
+            this.restTemplate.postForEntity(url + "/register", user, String.class);
+        } catch (HttpClientErrorException e) {
+            assertEquals("User " + user.getEmail() + " saved!", e.getResponseBodyAsString());
+            assertEquals(HttpStatus.CREATED, e.getStatusCode());
+        }
+    }
+
+    @Test
     public void testUserAlreadyExists() {
         User user = new User("user1@test.at", "user1", "secret");
         this.restTemplate.postForEntity(url + "/register", user, String.class);

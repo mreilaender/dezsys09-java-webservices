@@ -39,6 +39,18 @@ public class LoginTest {
     }
 
     @Test
+    public void testUserSuccessfullyLoggedIn() {
+        User user = new User("user1@test.at", "user1", "secret");
+        this.restTemplate.postForEntity(url + "/register", user, String.class);
+        try {
+            this.restTemplate.postForEntity(url + "/login", user, String.class);
+        } catch (HttpClientErrorException e) {
+            assertEquals("Welcome " + user.getName() + "!", e.getResponseBodyAsString());
+            assertEquals(HttpStatus.OK, e.getStatusCode());
+        }
+    }
+
+    @Test
     public void testUserWrongEmail() {
         User user = new User("", "user1", "secret");
         try {
