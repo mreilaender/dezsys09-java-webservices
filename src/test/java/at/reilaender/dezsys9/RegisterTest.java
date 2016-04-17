@@ -151,4 +151,15 @@ public class RegisterTest {
             assertEquals(HttpStatus.BAD_REQUEST, e.getStatusCode());
         }
     }
+
+    @Test
+    public void testUserEmptyEmailString() {
+        User user = new User("", "user1", null);
+        try {
+            this.restTemplate.postForEntity(url + "/register", user, String.class);
+        } catch (HttpClientErrorException e) {
+            assertEquals("Missing parameters!", e.getResponseBodyAsString());
+            assertEquals(HttpStatus.BAD_REQUEST, e.getStatusCode());
+        }
+    }
 }
