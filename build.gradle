@@ -23,12 +23,12 @@ repositories {
     mavenCentral()
 }
 springBoot {
-    mainClass = "at.kalauner.dezsys09.Application"
+    mainClass = "at.reilaender.dezsys9.Application"
 }
 
 
 jar {
-    baseName = 'Kalauner_Dezsys09'
+    baseName = 'reilaender_dezsys9'
     version = '1.0'
     from sourceSets.main.allSource
 }
